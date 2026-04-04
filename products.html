@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog | Sapline Pharmaceutical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-transparent.png" alt="Sapline Pharmaceuticals" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="products.html" style="color:var(--accent) !important">Products</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#contact" class="nav-contact">Contact Us</a></li>
+                <li>
+                    <button class="nav-cart" onclick="openBasket()" title="Inquiry List">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="nav-cart-count" id="topbarCount">0</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Product Catalog</span>
+            </div>
+            <h1>Our Product Catalog</h1>
+            <p>Explore our comprehensive range of pharmaceutical products across 9+ therapeutic areas. Add products to your inquiry list and our team will connect with you.</p>
+        </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-layout">
+                <!-- Sidebar -->
+                <aside class="catalog-sidebar">
+                    <!-- Search -->
+                    <div class="filter-card">
+                        <h3><i class="fas fa-search"></i> Search Products</h3>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search by name, composition...">
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="filter-card">
+                        <h3><i class="fas fa-th-large"></i> Categories</h3>
+                        <ul class="filter-list" id="categoryList">
+                            <!-- Rendered by JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Dosage Form -->
+                    <div class="filter-card">
+                        <h3><i class="fas fa-capsules"></i> Dosage Form</h3>
+                        <div class="form-tags">
+                            <button class="form-tag active" data-form="All" onclick="setFormFilter('All', this)">All</button>
+                            <button class="form-tag" data-form="Tablets" onclick="setFormFilter('Tablets', this)">Tablets</button>
+                            <button class="form-tag" data-form="Capsules" onclick="setFormFilter('Capsules', this)">Capsules</button>
+                            <button class="form-tag" data-form="Syrup" onclick="setFormFilter('Syrup', this)">Syrup</button>
+                            <button class="form-tag" data-form="Cream" onclick="setFormFilter('Cream', this)">Cream</button>
+                            <button class="form-tag" data-form="Powder" onclick="setFormFilter('Powder', this)">Powder</button>
+                            <button class="form-tag" data-form="Drops" onclick="setFormFilter('Drops', this)">Drops</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main -->
+                <div class="catalog-main">
+                    <!-- Top Bar -->
+                    <div class="catalog-topbar">
+                        <div class="catalog-count" id="catalogCount">
+                            <!-- Rendered by JS -->
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="catalog-sort">
+                                <label>Sort by:</label>
+                                <select id="sortSelect">
+                                    <option value="name">Name (A-Z)</option>
+                                    <option value="category">Category</option>
+                                </select>
+                            </div>
+                            <div class="catalog-view-toggle">
+                                <button class="view-btn active" onclick="setView('grid', this)" title="Grid View">
+                                    <i class="fas fa-th-large"></i>
+                                </button>
+                                <button class="view-btn" onclick="setView('list', this)" title="List View">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="catalog-grid" id="catalogGrid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Basket Side Panel -->
+    <div class="basket-overlay" id="basketOverlay"></div>
+    <div class="basket-panel" id="basketPanel">
+        <div class="basket-header">
+            <h3><i class="fas fa-clipboard-list"></i> Inquiry List <span class="basket-header-count">0 items</span></h3>
+            <button class="basket-close" onclick="closeBasket()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="basket-body" id="basketBody">
+            <!-- Rendered by JS -->
+        </div>
+        <div class="basket-footer">
+            <p><i class="fas fa-info-circle"></i> Submit your inquiry and our team will contact you within <strong>5–10 minutes</strong> during business hours.</p>
+            <button class="btn-submit-inquiry" onclick="openInquiryModal()">
+                Submit Inquiry <i class="fas fa-paper-plane"></i>
+            </button>
+            <button class="btn-clear-basket" onclick="clearBasket()">
+                Clear All
+            </button>
+        </div>
+    </div>
+
+    <!-- Inquiry Form Modal -->
+    <div class="inquiry-modal-overlay" id="inquiryModal">
+        <div class="inquiry-modal">
+            <div class="inquiry-modal-header">
+                <h3>Complete Your Inquiry</h3>
+                <button class="inquiry-modal-close" onclick="closeInquiryModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="inquiry-modal-body">
+                <div class="inquiry-product-summary">
+                    <h4>Products Selected</h4>
+                    <ul id="inquirySummaryList">
+                        <!-- Rendered by JS -->
+                    </ul>
+                </div>
+                <form class="inquiry-form" id="inquiryForm" action="https://formspree.io/f/xbdppoaq" method="POST">
+                    <input type="hidden" name="_subject" value="Product Inquiry from Sapline Website">
+                    <input type="hidden" name="products" id="inqProductsHidden">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inqName">Full Name *</label>
+                            <input type="text" id="inqName" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inqEmail">Email *</label>
+                            <input type="email" id="inqEmail" name="email" placeholder="you@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inqPhone">Phone Number *</label>
+                            <input type="tel" id="inqPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inqCompany">Company / Hospital</label>
+                            <input type="text" id="inqCompany" name="company" placeholder="Your organization">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inqMessage">Additional Requirements</label>
+                        <textarea id="inqMessage" name="message" placeholder="Quantity, specific strengths, delivery timeline..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-send-inquiry">
+                        Send Inquiry <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="successModal">
+        <div class="success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Inquiry Submitted!</h2>
+            <p class="success-subtitle">
+                Thank you for your interest. Our team will <strong>connect with you via call within 5–10 minutes</strong> during business hours. Your product list has been sent to our team.
+            </p>
+            <div class="success-contact-info">
+                <p><i class="fas fa-envelope"></i> saplinepharmaceutical@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> +91 8002496973</p>
+                <p><i class="fas fa-clock"></i> Mon – Sat, 9 AM – 6 PM IST</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeSuccess()">
+                Continue Browsing <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quickview-overlay" id="quickviewOverlay">
+        <div class="quickview-modal">
+            <div class="quickview-top">
+                <div class="quickview-image">
+                    <i class="fas fa-pills" id="qvIcon"></i>
+                </div>
+                <div class="quickview-info">
+                    <button class="quickview-close" onclick="closeQuickView()"><i class="fas fa-times"></i></button>
+                    <div class="quickview-category" id="qvCategory">Category</div>
+                    <h2 id="qvName">Product Name</h2>
+                    <div class="quickview-details">
+                        <div class="quickview-detail">
+                            <strong>Composition</strong>
+                            <span id="qvComposition">—</span>
+                        </div>
+                        <div class="quickview-detail">
+                            <strong>Dosage Form</strong>
+                            <span id="qvForm">—</span>
+                        </div>
+                        <div class="quickview-detail">
+                            <strong>Packaging</strong>
+                            <span id="qvPackaging">—</span>
+                        </div>
+                        <div class="quickview-detail">
+                            <strong>Category</strong>
+                            <span id="qvCategory2">—</span>
+                        </div>
+                    </div>
+                    <div class="quickview-actions">
+                        <button class="btn-inquiry" id="qvInquiryBtn">
+                            <i class="fas fa-plus"></i> Add to Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo-transparent.png" alt="Sapline Pharmaceuticals" class="logo-img">
+                    </a>
+                    <p>Dedicated to improving global health through innovative pharmaceutical solutions, ethical practices, and unwavering quality standards.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Drug Research</a></li>
+                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#">Quality Assurance</a></li>
+                        <li><a href="#">Distribution</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Therapeutic Areas</h4>
+                    <ul>
+                        <li><a href="products.html">Pain & Ortho</a></li>
+                        <li><a href="products.html">Gastro</a></li>
+                        <li><a href="products.html">Neuroscience</a></li>
+                        <li><a href="products.html">Urology</a></li>
+                        <li><a href="products.html">Vitamins</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sapline Pharmaceuticals Private Limited. All rights reserved. &nbsp;|&nbsp; CIN: U21001UP2023PTC185501 &nbsp;|&nbsp; PAN: ABLCS2375M</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

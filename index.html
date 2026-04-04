@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapline Pharmaceutical | Innovating Health, Empowering Lives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            <img src="images/logo-transparent.png" alt="Sapline Pharmaceuticals" class="preloader-logo-img">
+        </div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- Latest Event Popup -->
+    <div class="event-popup-overlay" id="eventPopupOverlay">
+        <div class="event-popup">
+            <button class="event-popup-close" id="eventPopupClose"><i class="fas fa-times"></i></button>
+            <div class="event-popup-badge"><i class="fas fa-bolt"></i> Latest Event</div>
+            <div class="event-popup-image">
+                <img src="images/ram_navmi.jpeg" alt="Ram Navami Celebration - Sapline Pharmaceuticals">
+            </div>
+            <div class="event-popup-content">
+                <h3>Ram Navami & Dandiya Night</h3>
+                <div class="event-popup-meta">
+                    <span><i class="fas fa-calendar-alt"></i> Ram Navami 2025</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Community Event</span>
+                </div>
+                <p>Sapline Pharmaceuticals organized a grand Ram Navami celebration along with a vibrant Dandiya Night, bringing the community together in a joyous celebration of culture and togetherness.</p>
+                <a href="#events" class="btn btn-primary event-popup-btn" id="eventPopupViewAll">
+                    View All Events <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/logo-transparent.png" alt="Sapline Pharmaceuticals" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="nav-contact">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+        </div>
+        <div class="hero-grid"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-circle"></i> Leading Pharmaceutical Innovation
+                </div>
+                <h1>Innovating Health,<br><span class="highlight">Empowering Lives</span></h1>
+                <p class="hero-description">
+                    At Sapline Pharmaceutical, we are committed to discovering, developing, and
+                    delivering breakthrough therapies that transform the lives of patients worldwide.
+                </p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">
+                        Explore Products <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        Learn More <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>200+</h3>
+                        <p>Products</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>3+</h3>
+                        <p>Countries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="hero-main-circle">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=400&fit=crop" alt="Pharmaceutical Research">
+                    </div>
+                    <div class="hero-floating-card">
+                        <div class="card-icon"><i class="fas fa-flask"></i></div>
+                        <div class="card-text">
+                            <h4>R&D Excellence</h4>
+                            <p>50+ Active Research Programs</p>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card">
+                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="card-text">
+                            <h4>WHO-GMP Certified</h4>
+                            <p>International Quality Standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted">
+        <div class="container">
+            <p>Trusted & Certified By</p>
+            <div class="trusted-logos">
+                <i class="fas fa-hospital"></i>
+                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-microscope"></i>
+                <i class="fas fa-pills"></i>
+                <i class="fas fa-stethoscope"></i>
+                <i class="fas fa-dna"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="about-image-main">
+                        <img src="images/about-us.jpeg" alt="About Sapline Pharmaceutical">
+                    </div>
+                    <div class="about-experience-badge">
+                        <h3>Est.</h3>
+                        <p>July<br>2023</p>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Dedicated to Pharmaceutical Excellence</h2>
+                    <p class="section-subtitle">
+                        Sapline Pharmaceutical is a leading pharmaceutical company dedicated to improving
+                        global health through innovation, quality, and compassion. We develop, manufacture,
+                        and distribute high-quality pharmaceutical products across therapeutic areas.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>WHO-GMP Certified</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ISO 9001:2015</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>200+ Product Portfolio</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Global Distribution</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>State-of-Art R&D</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ethical Practices</span>
+                        </div>
+                    </div>
+                    <a href="#services" class="btn btn-dark">
+                        Discover More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Message -->
+    <section class="director section" id="director">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Leadership</span>
+                <h2 class="section-title">Message from the Director</h2>
+                <p class="section-subtitle">A vision for better healthcare and a healthier tomorrow</p>
+            </div>
+            <div class="director-card reveal-scale">
+                <div class="director-image">
+                    <img src="images/Subject.png" alt="Director - Sapline Pharmaceutical">
+                </div>
+                <div class="director-content">
+                    <div class="director-quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="director-message">
+                        "At Sapline Pharmaceutical, our mission transcends beyond manufacturing medicines — we are
+                        in the business of saving lives and nurturing hope. Every formulation we develop, every quality
+                        check we perform, and every patient we reach is a testament to our unwavering commitment to
+                        global health. Together with our exceptional team, we strive to push the boundaries of
+                        pharmaceutical science to create a healthier, more equitable world for generations to come."
+                    </p>
+                    <h4 class="director-name">Mr. Niranjan Arya</h4>
+                    <p class="director-title">Managing Director & Founder</p>
+                    <p class="director-signature">Niranjan Arya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Our Core Services</h2>
+                <p class="section-subtitle">Comprehensive pharmaceutical solutions backed by science and driven by compassion</p>
+            </div>
+            <div class="services-grid stagger-children">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Drug Research & Development</h3>
+                    <p>Our world-class R&D facilities focus on discovering novel molecules and innovative drug delivery systems for unmet medical needs.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Contract Manufacturing</h3>
+                    <p>State-of-the-art manufacturing facilities producing tablets, capsules, injectables, and topical formulations at scale with global compliance.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-pills"></i></div>
+                    <h3>Generic Formulations</h3>
+                    <p>Making quality healthcare accessible through affordable generic medications across multiple therapeutic categories.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality control at every stage from raw material sourcing to finished product testing, ensuring patient safety.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Global Distribution</h3>
+                    <p>Efficient supply chain management ensuring timely delivery of pharmaceutical products across 3+ countries worldwide.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Strategic Partnerships</h3>
+                    <p>Collaborating with healthcare providers, research institutions, and governments to amplify our impact on global health outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">Manufacturing Plants</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="products section" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Products</span>
+                <h2 class="section-title">Therapeutic Areas</h2>
+                <p class="section-subtitle">Delivering targeted solutions across critical therapeutic segments</p>
+            </div>
+            <div class="products-grid stagger-children">
+                <div class="product-card reveal">
+                    <div class="product-image"><i class="fas fa-bone"></i></div>
+                    <div class="product-info">
+                        <div class="product-category">Pain & Ortho</div>
+                        <h3>Pain Management</h3>
+                        <p>Effective analgesic and anti-inflammatory formulations for pain relief, muscle relaxation, and orthopaedic care.</p>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-image"><i class="fas fa-stomach"></i></div>
+                    <div class="product-info">
+                        <div class="product-category">Gastro</div>
+                        <h3>Gastrointestinal Care</h3>
+                        <p>Digestive enzyme syrups, acid-control capsules, and pediatric drops for complete gastro health.</p>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-image"><i class="fas fa-brain"></i></div>
+                    <div class="product-info">
+                        <div class="product-category">Neuroscience</div>
+                        <h3>Neuro & CNS</h3>
+                        <p>Advanced neuroprotective formulations with essential vitamins and minerals for nerve health.</p>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-image"><i class="fas fa-pills"></i></div>
+                    <div class="product-info">
+                        <div class="product-category">Urology</div>
+                        <h3>Urological Health</h3>
+                        <p>Targeted therapies for urological conditions including BPH management and urinary care.</p>
+                    </div>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-image"><i class="fas fa-capsules"></i></div>
+                    <div class="product-info">
+                        <div class="product-category">Vitamins</div>
+                        <h3>Vitamins & Supplements</h3>
+                        <p>Iron supplements, multivitamins, and multiminerals for overall wellness and nutritional support.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:50px;" class="reveal">
+                <a href="products.html" class="btn btn-dark">
+                    View All Products <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team section" id="team">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our People</span>
+                <h2 class="section-title">Meet Our Leadership</h2>
+                <p class="section-subtitle">Driven professionals committed to excellence in pharmaceutical innovation</p>
+            </div>
+            <div class="team-grid stagger-children">
+                <div class="team-card reveal">
+                    <div class="team-image team-image-director">
+                        <img src="images/Subject.png" alt="Niranjan Arya">
+                        <div class="team-overlay">
+                            <a href="https://www.linkedin.com/in/niranjan-arya-58ba4b377/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <h3>Niranjan Arya</h3>
+                    <p class="role">Managing Director</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-image team-image-placeholder">
+                        <div class="team-placeholder-icon"><i class="fas fa-user"></i></div>
+                        <div class="team-overlay">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <h3>Sikha Arya</h3>
+                    <p class="role">Operations Manager</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-image team-image-placeholder">
+                        <div class="team-placeholder-icon"><i class="fas fa-user"></i></div>
+                        <div class="team-overlay">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <h3>Rajat Kumar</h3>
+                    <p class="role">Sales & Business Development</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-image team-image-placeholder">
+                        <div class="team-placeholder-icon"><i class="fas fa-user"></i></div>
+                        <div class="team-overlay">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <h3>Ritul Raj</h3>
+                    <p class="role">Digital, Development & Marketing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our Partners Say</h2>
+                <p class="section-subtitle">Trusted by healthcare professionals and partners worldwide</p>
+            </div>
+            <div class="testimonial-slider stagger-children">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sapline Pharmaceutical has been our trusted partner for over 5 years. Their commitment to quality and timely delivery is unmatched in the industry."</p>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The quality of generic formulations from Sapline is exceptional. They have helped us make healthcare more accessible to thousands of patients."</p>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Their R&D capabilities and regulatory expertise have made our collaboration incredibly productive. Sapline sets the gold standard."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events & CSR -->
+    <section class="events section" id="events">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Community</span>
+                <h2 class="section-title">Events & CSR Initiatives</h2>
+                <p class="section-subtitle">Giving back to the community through cultural celebrations and social initiatives</p>
+            </div>
+            <div class="events-grid stagger-children">
+                <div class="event-card reveal">
+                    <div class="event-image">
+                        <img src="images/dandiya.jpeg" alt="Dandiya Night - Durga Puja Celebration powered by Sapline Pharmaceuticals">
+                        <div class="event-date"><i class="fas fa-calendar-alt"></i> Durga Puja</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Dandiya Night Celebration</h3>
+                        <p>Sapline Pharmaceuticals proudly sponsored and organized a vibrant Dandiya Night during Durga Puja, bringing the community together in celebration.</p>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <div class="event-image">
+                        <img src="images/ram_navmi.jpeg" alt="Ram Navami Celebration powered by Sapline Pharmaceuticals">
+                        <div class="event-date"><i class="fas fa-calendar-alt"></i> Ram Navami</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Ram Navami Celebration</h3>
+                        <p>Sapline Pharmaceuticals organized a heartfelt Ram Navami celebration, strengthening community bonds and honoring cultural traditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container reveal">
+            <h2>Ready to Partner with Us?</h2>
+            <p>Join hands with Sapline Pharmaceutical and be part of our mission to make quality healthcare accessible to everyone, everywhere.</p>
+            <a href="#contact" class="btn">
+                Get In Touch <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Let's Connect</h3>
+                    <p>Have a query or want to explore partnership opportunities? We'd love to hear from you.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Registered Office</h4>
+                                <p>Sapline Pharmaceuticals Pvt. Ltd.<br>1/COM-1A, Plot No. 102-FF, Vasundhara,<br>Ghaziabad – 201012, Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 8002496973</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>saplinepharmaceutical@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/niranjan-arya-58ba4b377/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal-right">
+                    <h3>Send Us a Message</h3>
+                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                    <form id="contactForm" action="https://formspree.io/f/xbdppoaq" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a topic</option>
+                                    <option>Business Inquiry</option>
+                                    <option>Partnership Opportunity</option>
+                                    <option>Product Information</option>
+                                    <option>Career Inquiry</option>
+                                    <option>General Question</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <img src="images/logo-transparent.png" alt="Sapline Pharmaceuticals" class="logo-img">
+                    </a>
+                    <p>Dedicated to improving global health through innovative pharmaceutical solutions, ethical practices, and unwavering quality standards.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Drug Research</a></li>
+                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#">Quality Assurance</a></li>
+                        <li><a href="#">Distribution</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Therapeutic Areas</h4>
+                    <ul>
+                        <li><a href="products.html">Pain & Ortho</a></li>
+                        <li><a href="products.html">Gastro</a></li>
+                        <li><a href="products.html">Neuroscience</a></li>
+                        <li><a href="products.html">Urology</a></li>
+                        <li><a href="products.html">Vitamins</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sapline Pharmaceuticals Private Limited. All rights reserved. &nbsp;|&nbsp; CIN: U21001UP2023PTC185501 &nbsp;|&nbsp; PAN: ABLCS2375M</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
