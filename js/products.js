@@ -25,6 +25,9 @@ const PRODUCTS = [
     // --- Vitamins & Supplements ---
     { id: 11, name: "Saprox XT", composition: "Ferrous Ascorbate, Folic Acid & Zinc Sulphate Tablets", category: "Vitamins", form: "Tablets", packaging: "10x10 Tablets", badge: "bestseller", icon: "fa-capsules", image: "med_products/med2.jpeg" },
     { id: 12, name: "Sapmore", composition: "Multivitamin & Multiminerals Syrup", category: "Vitamins", form: "Syrup", packaging: "200ml Bottle", badge: "popular", icon: "fa-capsules", image: "med_products/med9.jpeg" },
+
+    // --- Hepatology ---
+    { id: 13, name: "Udisap 300", composition: "Ursodeoxycholic Acid 300mg Tablets", category: "Gastro", form: "Tablets", packaging: "10x10 Tablets", badge: "new", icon: "fa-stomach", image: "med_products/med_13.jpeg" },
 ];
 
 // ===== CATEGORY ICONS =====
@@ -180,20 +183,20 @@ function renderBasket() {
         }
     });
 
-    // Update navbar cart count
-    const topbarCount = document.getElementById('topbarCount');
-    if (topbarCount) {
-        topbarCount.textContent = inquiryBasket.length;
-        topbarCount.classList.toggle('hide', inquiryBasket.length === 0);
-    }
+    // Update navbar cart count (desktop + mobile)
+    document.querySelectorAll('#topbarCount, #topbarCountMobile').forEach(el => {
+        el.textContent = inquiryBasket.length;
+        el.classList.toggle('hide', inquiryBasket.length === 0);
+    });
 
-    // Bounce animation on cart
-    const navCart = document.querySelector('.nav-cart');
-    if (navCart && inquiryBasket.length > 0) {
-        navCart.classList.remove('bounce');
-        void navCart.offsetWidth;
-        navCart.classList.add('bounce');
-    }
+    // Bounce animation on cart (all visible cart buttons)
+    document.querySelectorAll('.nav-cart').forEach(navCart => {
+        if (inquiryBasket.length > 0) {
+            navCart.classList.remove('bounce');
+            void navCart.offsetWidth;
+            navCart.classList.add('bounce');
+        }
+    });
 
     // Render items
     if (inquiryBasket.length === 0) {

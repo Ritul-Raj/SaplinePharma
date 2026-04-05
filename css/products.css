@@ -369,6 +369,24 @@
     animation: cartBounce 0.4s ease;
 }
 
+/* Mobile cart button (next to hamburger) — hidden on desktop */
+.nav-right-mobile {
+    display: none;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .nav-right-mobile {
+        display: flex;
+    }
+
+    /* Hide the cart button inside the slide-out menu on mobile */
+    .nav-links .nav-cart {
+        display: none;
+    }
+}
+
 /* ===== TOPBAR INQUIRY BUTTON ===== */
 .topbar-inquiry-btn {
     display: flex;
