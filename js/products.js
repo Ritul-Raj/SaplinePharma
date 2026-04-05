@@ -13,7 +13,7 @@ const PRODUCTS = [
 
     // --- Gastro ---
     { id: 6, name: "Saptard-D", composition: "Pantoprazole Gastro-Resistant & Domperidone Prolonged-Release Capsules I.P.", category: "Gastro", form: "Capsules", packaging: "10x10 Alu-Alu", badge: "bestseller", icon: "fa-stomach", image: "med_products/med6.jpeg" },
-    { id: 7, name: "Aashvi Zyme Syrup", composition: "Digestive Enzyme Syrup", category: "Gastro", form: "Syrup", packaging: "200ml Bottle", badge: "popular", icon: "fa-stomach", image: "med_products/med11.png" },
+    { id: 7, name: "Aashvi Zyme Syrup", composition: "Digestive Enzyme Syrup", category: "Gastro", form: "Syrup", packaging: "200ml Bottle", badge: "new", icon: "fa-stomach", image: "med_products/med11.png" },
     { id: 8, name: "Aashvi Zyme Drops", composition: "Fungal Diastase & Pepsin Drops (Pediatric Use)", category: "Gastro", form: "Drops", packaging: "30ml Bottle", badge: "new", icon: "fa-stomach", image: "med_products/med12.png" },
 
     // --- Urology ---
