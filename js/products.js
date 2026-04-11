@@ -8,7 +8,7 @@ const PRODUCTS = [
     { id: 1, name: "Sapwin-SPAS", composition: "Aceclofenac 100mg & Drotaverine Hydrochloride 80mg Tablets", category: "Pain & Ortho", form: "Tablets", packaging: "10x10 Alu-Alu", badge: "bestseller", icon: "fa-bone", image: "med_products/med5.jpeg" },
     { id: 2, name: "Sapwin-Fort", composition: "Aceclofenac, Paracetamol & Serratiopeptidase Tablets", category: "Pain & Ortho", form: "Tablets", packaging: "10x10 Alu-Alu", badge: "popular", icon: "fa-bone", image: "med_products/med4.jpeg" },
     { id: 3, name: "Sapwin-Plus", composition: "Aceclofenac & Paracetamol Tablets", category: "Pain & Ortho", form: "Tablets", packaging: "10x10 Alu-Alu", badge: "", icon: "fa-bone", image: "med_products/med10.jpeg" },
-    { id: 4, name: "Sapwin DP", composition: "Drotaverine Hydrochloride & Paracetamol Tablets", category: "Pain & Ortho", form: "Tablets", packaging: "10x10 Tablets", badge: "", icon: "fa-bone", image: "med_products/med1.jpeg" },
+    { id: 4, name: "Sapwin DP", composition: "Drotaverine Hydrochloride & Paracetamol Tablets", category: "Spasmodic Pain", form: "Tablets", packaging: "10x10 Tablets", badge: "", icon: "fa-hand-holding-medical", image: "med_products/med1.jpeg" },
     { id: 5, name: "Sapwin-MR", composition: "Etoricoxib & Thiocolchicoside Tablets", category: "Pain & Ortho", form: "Tablets", packaging: "10x10 Tablets", badge: "new", icon: "fa-bone", image: "med_products/med8.jpeg" },
 
     // --- Gastro ---
@@ -28,6 +28,9 @@ const PRODUCTS = [
 
     // --- Hepatology ---
     { id: 13, name: "Udisap 300", composition: "Ursodeoxycholic Acid 300mg Tablets", category: "Gastro", form: "Tablets", packaging: "10x10 Tablets", badge: "new", icon: "fa-stomach", image: "med_products/med_13.jpeg" },
+
+    // --- Anti-Infective ---
+    { id: 14, name: "Sapcin-O", composition: "Cefixime & Ofloxacin Tablets", category: "Anti-Infective", form: "Tablets", packaging: "10x10 Tablets", badge: "new", icon: "fa-shield-virus", image: "med_products/med14.jpeg" },
 ];
 
 // ===== CATEGORY ICONS =====
@@ -36,7 +39,9 @@ const CATEGORY_ICONS = {
     "Gastro": "fa-stomach",
     "Urology": "fa-pills",
     "Neuroscience": "fa-brain",
-    "Vitamins": "fa-capsules"
+    "Vitamins": "fa-capsules",
+    "Anti-Infective": "fa-shield-virus",
+    "Spasmodic Pain": "fa-hand-holding-medical"
 };
 
 // ===== STATE =====
